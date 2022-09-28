@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const client = axios.create({
-  baseURL: `http://origin8solutions.com/api/v1`,
+  baseURL: `http://localhost/api/v1`,
 });

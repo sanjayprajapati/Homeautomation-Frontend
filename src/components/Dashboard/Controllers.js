@@ -20,7 +20,6 @@ import { createControllers } from "../../controller/controllers";
 import Loader from "../Layout/Loader/Loader";
 import AdminHeader from "../Layout/Header/AdminHeader";
 import MetaData from "../Layout/Header/MetaDeta";
-import { windowWhen } from "rxjs";
 
 const controllerSchema = Yup.object().shape({
   ctype: Yup.string().required("Required"),

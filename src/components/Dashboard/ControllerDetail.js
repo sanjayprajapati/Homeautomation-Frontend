@@ -15,7 +15,7 @@ import logo from "../../images/qr-logo.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { getDevicesByControllerId } from "../../controller/controllers";
 import AdminHeader from "../Layout/Header/AdminHeader";
-import { async } from "rxjs";
+
 import { downloadFile } from "../../controller/controllers";
 import MetaData from "../Layout/Header/MetaDeta";
 
