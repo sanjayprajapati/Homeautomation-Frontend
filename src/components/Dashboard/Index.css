@@ -1,0 +1,144 @@
+.topBar {
+    background: #fff;
+    background-image: url(../../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    height: 60px;
+    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 5%);    
+}
+.contentBar {
+    display: flex;
+    margin-top: 60px;
+}
+.lefPanel {
+    background-color: #fff;
+    width: 250px;
+    min-height: calc(100vh - 60px);
+    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 5%);
+}
+.navigation {
+    list-style: none;
+
+}
+.navigation li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    
+}
+.navigation li a {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 20px 20px;
+}
+.navigation li a svg {
+    font-size: 20px;
+    color:#000;
+    margin-right: 10px;
+}
+.rightPanel {
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+.contentBox {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 8px 0px rgb(0 0 0 / 5%); 
+    position: relative;
+}
+.tabs {
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+.pageHeading {
+    font-size: 22px;
+    font-weight: normal;
+    color: #fb8d4e;
+    margin-bottom: 20px;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.username {
+    text-transform: capitalize;
+}
+.btn {
+    background-color: #fb8d4e;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.btn.active {
+    background-color: blue;
+}
+.tabsbox {
+    display: none;
+    width: 100%;
+}
+.tabsbox.inview {
+    display: flex;
+}
+.create-new {
+    border-top: 1px solid #dee2e6;
+    width: 100%;
+}
+.subhead {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.group{
+    margin-bottom: 20px;
+}
+select,input {
+  padding: 10px 10px;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 14px cursive;
+  outline: none;
+  max-width: 300px;
+}
+input.submit {
+    border: none;
+  background-color: #fb8d4e;
+  color: white;
+  font: 300 16px "Roboto";
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  max-width: 300px; 
+}
+
+.copycode {
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+.code {
+    font-size: 12px;
+    color: #999;
+    margin: 0 10px;
+}
+.copycode .btn {
+    background-color: #467fcf;
+}
