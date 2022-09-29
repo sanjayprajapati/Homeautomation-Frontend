@@ -71,7 +71,7 @@ const ControllerDetail = () => {
     //console.log(headers);
     //let connection = new WebSocket(wsUrl, null, {headers});
     if (!ws.current) {
-      const socket = new WebSocket("ws://origin8solutions.com/ws", null, {
+      const socket = new WebSocket("ws://origin8solutions.com/wsapp", null, {
         headers,
       });
       ws.current = socket;
@@ -140,9 +140,9 @@ const ControllerDetail = () => {
 
       //console.log('ws.corrent', ws.current);
       return () => {
-        console.log("cleanup");
-        ws.current = null;
-        socket.close();
+        // console.log("cleanup");
+        // ws.current = null;
+        // socket.close();
         //setVal(null);
         //dispatch(getAllData(auth.user._id));
       };
