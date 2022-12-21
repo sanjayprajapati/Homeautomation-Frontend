@@ -15,9 +15,9 @@ const Home = () => {
           <h1>
             PHONE PE HOME
             <br />
-            Controll Your Home Aplliences
+            Control Your Home Aplliences
             <br />
-            AnyWhere AnyTime
+            Anywhere Anytime
           </h1>
         </div>
       </div>
