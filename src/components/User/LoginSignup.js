@@ -76,7 +76,7 @@ const LoginSignup = () => {
       <MetaData title={`SignUp & Login`} />
       <div className="LoginSignUpContainer">
         <div className="LoginSignUpBox">
-          {error && <span className="errormsg">{error}</span>}
+          {/*error && <span className="errormsg">{error}</span>*/}
           <div>
             <div className="login_signUp_toggle">
               <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>

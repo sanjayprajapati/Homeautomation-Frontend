@@ -28,7 +28,6 @@ function App() {
     (state) => state.user
   );
 
-  console.log(error);
   useEffect(() => {
     WebFont.load({
       google: {
