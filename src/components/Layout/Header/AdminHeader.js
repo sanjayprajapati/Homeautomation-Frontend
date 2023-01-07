@@ -1,5 +1,5 @@
 import React, { Fragment, useRef, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate, NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "../../../images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,46 +30,63 @@ const AdminHeader = () => {
     <Fragment>
       <div className="header-wrapper">
         <div className="">
-          <div className="header">
-            <div className="logo">
-              <Link to="/"></Link>
-            </div>
-            <nav className={isNavExpanded ? "menu" : "menu expanded"}>
-              <div className="navigationbar">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-
-                {!isAuthenticated ? (
-                  <Link to="/admin/login">Sign In</Link>
-                ) : (
-                  <div className="dropdown">
-                    <a href="javascript:void(0)" onClick={toggleDropdown}>
-                      {user.name}
-                    </a>
-                    <ul className="dropdownmenu" ref={dropmenu}>
-                      <li>
-                        <Link to="/admin/dashboard">Dashboard </Link>
+          <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <Link class="navbar-brand" to="/">
+                <img src={logo} />
+              </Link>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <NavLink class="nav-link active" aria-current="page" to="/">
+                      Home
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink class="nav-link" to="about">
+                      About
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink class="nav-link" to="contact">
+                      Contact
+                    </NavLink>
+                  </li>
+                  {!isAuthenticated ? (
+                    <li class="nav-item">
+                      <NavLink class="nav-link" to="admin/login">
+                        Sign In
+                      </NavLink>
+                    </li>
+                  ) : (
+                    <Fragment>
+                      <li class="nav-item">
+                        <NavLink class="nav-link" to="admin/dashboard">
+                          Dashboard
+                        </NavLink>
                       </li>
-                      <li>
-                        <a href="javascript:void(0)" onClick={logoutUser}>
-                          Logout
-                        </a>
+                      <li class="nav-item">
+                        <NavLink class="nav-link" to="admin/dashboard">
+                          {user.name}
+                        </NavLink>
                       </li>
-                    </ul>
-                  </div>
-                )}
+                    </Fragment>
+                  )}
+                </ul>
               </div>
-            </nav>
-            <button
-              className="hamburger"
-              onClick={() => {
-                setIsNavExpanded(!isNavExpanded);
-              }}
-            >
-              <span></span>
-            </button>
-          </div>
+            </div>
+          </nav>
         </div>
       </div>
     </Fragment>

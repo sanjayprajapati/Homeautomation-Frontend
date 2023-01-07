@@ -4,23 +4,35 @@ import Header from "../Layout/Header/Header";
 import "./Home.css";
 import dashbordimg from "../../images/dashboard.png";
 import rooms from "../../images/rooms.png";
+import herobg from "../../images/hero-bg.jpg";
 import Footer from "../Layout/Footer/Footer";
 
 const Home = () => {
   return (
     <Fragment>
-      <AdminHeader />
-      <div className="home-container">
-        <div className="container">
-          <h1>
-            PHONE PE HOME
-            <br />
-            Control Your Home Aplliences
-            <br />
-            Anywhere Anytime
-          </h1>
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src={herobg} class="d-block w-100 height-fit" alt="..." />
+            <div class="carousel-caption  d-md-block">
+              <h1>
+                <font color="#fb8d4e">PHONE</font> <font color="#fff">PE</font>{" "}
+                <font color="#3bad67">HOME</font>
+              </h1>
+              <p>
+                Control Your Home Aplliences
+                <br />
+                Anywhere Anytime
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+      {/*
       <div className="dashboard">
         <div className="container">
           <div className="main_box">
@@ -103,7 +115,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+  </div> */}
       <Footer />
     </Fragment>
   );

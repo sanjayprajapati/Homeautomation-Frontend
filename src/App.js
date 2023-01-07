@@ -1,4 +1,4 @@
-import "./App.css";
+//import "./App.css";
 import React, { useEffect, useState, Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -21,6 +21,9 @@ import ControllerType from "./components/Dashboard/ControllerType";
 import ControllerDetail from "./components/Dashboard/ControllerDetail";
 import UserDetail from "./components/Dashboard/UserDetail";
 import ControllerTypeDetail from "./components/Dashboard/ControllerTypeDetail";
+import About from "./components/About/About";
+import AdminHeader from "./components/Layout/Header/AdminHeader";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,39 +43,42 @@ function App() {
 
   return (
     <Router basename="/">
-      {/*<Loader />*/}
+      <AdminHeader />
 
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="about" element={<About />} />
+        <Route exact path="contact" element={<Contact />} />
+
         <Route element={<ProtectedRoute />}>
-          <Route exact path="/admin/dashboard" element={<Index />} />
+          <Route exact path="admin/dashboard" element={<Index />} />
           <Route
             exact
-            path="/admin/dashboard/users/:id"
+            path="admin/dashboard/users/:id"
             element={<UserDetail />}
           />
           <Route
             exact
-            path="/admin/dashboard/controllers"
+            path="admin/dashboard/controllers"
             element={<Controllers />}
           />
           <Route
             exact
-            path="/admin/dashboard/controllers/:id"
+            path="admin/dashboard/controllers/:id"
             element={<ControllerDetail />}
           />
           <Route
             exact
-            path="/admin/dashboard/controllerstype/:id"
+            path="admin/dashboard/controllerstype/:id"
             element={<ControllerTypeDetail />}
           />
           <Route
             exact
-            path="/admin/dashboard/controllerstype"
+            path="admin/dashboard/controllerstype"
             element={<ControllerType />}
           />
         </Route>
-        <Route exact path="/admin/login" element={<LoginSignup />} />
+        <Route exact path="admin/login" element={<LoginSignup />} />
       </Routes>
     </Router>
   );

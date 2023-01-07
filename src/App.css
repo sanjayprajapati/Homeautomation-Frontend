@@ -6,6 +6,7 @@
 body {
   font-family: Roboto;
   background-color: #f3f3f3;
+  padding-top: 76px;
 }
 a {
   color: #333;
@@ -14,16 +15,27 @@ a {
 a:hover {
   color: #fb8d4e;
 }
-.container {
-  width: 1160px;
-  margin: auto;
-  padding: 0 15px;
-  max-width: 100%;
+
+.home-container h1 {
+  font-size: 2.8rem;
+  color: #fb8d4e;
 }
+
 .errormsg {
   color: #fff;
   background-color: red;
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
+}
+.carousel-caption {
+  color: #fb8d4e;
+}
+
+@media screen and (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}
 }
